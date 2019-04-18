@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pogoda - Czechowice-Dziedzice</title>
+</head>
+
+<body>
+    <div class="main-wraper">
+        <div class="top-bar">
+            <div class="clock">
+                <iframe scrolling="no" clocktype="html5"
+                    style="overflow:hidden;border:0;margin:0;padding:0;width:240px;height:25px;"
+                    src="https://www.clocklink.com/html5embed.php?clock=018&amp;timezone=Poland_Krakow&amp;color=gray&amp;size=240&amp;Title=&amp;Message=&amp;Target=&amp;From=2018,1,1,0,0,0&amp;DateFormat=yyyy / mm / dd DDD&amp;TimeFormat=H:mm&amp;Color=gray"
+                    frameborder="no"></iframe>
+            </div>
+            <div class="top-text">
+                <h1>Amatorska stacja pogody w Czechowicach-Dziedzicach</h1>
+                <p>Prosta stacja pogodowa oparta o Arduino</p>
+            </div>
+            <div class="social-icon">
+                <a href="#"><img src="/img/information.svg" alt="about"></a>
+                <a href="https://github.com/kmlZ" target="_blank"><img src="/img/github-logo.svg" alt="github-logo"></a>
+                <a href="mailto:kamilsteelS@outlook.com"><img src="/img/mail.svg" alt="mail-logo"></a>
+            </div>
+        </div>
+        <!-- END OF TOP -->
+        <div class="main-content">
+            <div class="data">
+                <h3>Temperatura</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/temperature.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\temperature.html"></iframe>
+                </div>
+            </div>
+            <!-- END OF TEMP -->
+            <div class="data">
+                <h3>Ciśnienie atmoseferyczne(bezwzględne)</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/pressure.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\pressure.html"></iframe>
+                </div>
+            </div>
+            <!-- END OF PRESSURE -->
+            <div class="data">
+                <h3>Wilgotność powietrza</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/humidity.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\humidity.html"></iframe>
+                </div>
+            </div>
+            <!-- END OF HUMIDITY -->
+            <div class="data">
+                <h3>Prędkość wiatru</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/windspeed.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\windspeed.html"></iframe>
+                </div>
+            </div>
+            <!-- END OF WINDSPEED -->
+            <div class="data">
+                <h3>Natężenie światła</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/lux.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\lux.html"></iframe>
+                </div>
+            </div>
+            <!-- END OF LUX -->
+            <div class="data">
+                <h3>Temperatura odczuwalna</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/windchill.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\windchill.html"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer class="main-footer">          
+                <ul>
+                    <li><a href="#">O projekcie</a></li>
+                    <li><a href="https://github.com/kmlZ" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:kamilsteelS@outlook.com">Kontakt</a></li>
+                </ul>
+        </footer>
+    </div>
+
+</body>
+
+</html>

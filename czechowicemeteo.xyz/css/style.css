@@ -1,0 +1,155 @@
+/* Web Fonts -------------------- */
+@font-face {
+    font-family: 'abolition regular';
+    src: url('/fonts/abolition-regular-webfont.eot');
+    src: url('/fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/abolition-regular-webfont.woff') format('woff'),
+        url('/fonts/abolition-regular-webfont.ttf') format('truetype');
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 1em/1.5 'abolition regular', Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    background: linear-gradient(lightblue, transparent 50%),
+        linear-gradient(0deg, lightblue, transparent 20%),
+        url('../img/Meto_station.png') no-repeat center;
+    background-size: cover;
+    /* height: 100vh; */
+    position: relative;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    border-bottom: solid 1px lightcoral;
+}
+
+.top-text {
+    margin: auto 0;
+    color: #ffffff;
+    text-shadow: 1px 2px 5px #000000;
+}
+
+.top-text h1 {
+    font-size: 3.625rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    font-weight: lighter;
+    margin: 5px 0 5px 0;
+    padding: 0;
+
+}
+
+.top-text p {
+    font-size: 1.7rem;
+    /* text-transform: uppercase; */
+    margin: 5px auto;
+    /* text-transform:uppercase; */
+    line-height: 1.3;
+    padding: 0;
+
+}
+
+.clock,
+.top-text,
+.social-icon {
+    display: block;
+    align-content: space-between;
+    text-align: center;
+}
+
+
+.social-icon img {
+    width: 48px;
+    height: 48px;
+    margin: 5px;
+}
+
+.social-icon:first-child {
+    margin-left: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+
+.data {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+
+
+
+
+
+.gauge {
+    width: 334px;
+    height: 234px;
+    overflow: hidden;
+
+}
+
+.chart {
+    width: 430px;
+    height: 250px;
+    justify-content: center;
+
+}
+
+.gauge iframe,
+.chart iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: none;
+    display: block;
+}
+
+.main-footer {
+    border-top: solid 1px lightcoral;
+    display: flex;
+    justify-content: end;
+}
+
+.main-footer ul {
+    list-style: none;
+    font-size: .8em;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    margin-right: 30px;
+}
+
+
+a:hover {
+    color: red;
+}
