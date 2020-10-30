@@ -1,0 +1,27 @@
+async function loadData() {
+    // variable for the data point
+    const chartData = [];
+    const timeStamp = [];
+    // get the data from thingspeak
+    $.getJSON('https://api.thingspeak.com/channels/214058/fields/1.json?minutes=10', function(data) {
+        $.each(data.feeds, function(){
+            var value = this.field1;
+            var raw_time = this.created_at;
+            
+             if (value) {
+                value = (value / 1000) * 1000;
+                value = parseFloat( value.toFixed(2) );
+            }
+
+            if (raw_time){
+                var timewZ = raw_time.split("T").slice(1);
+                              
+            }
+            chartData.push(value);
+            timeStamp.push(timewZ);
+        });
+      
+        
+    });
+    return {chartData, timeStamp};
+  }

@@ -107,6 +107,16 @@ a {
 
 }
 
+.widgetnoflex{
+    padding: 30px;
+  
+    
+}
+
+.widget{
+    padding: 30px;
+}
+
 
 
 
@@ -120,11 +130,15 @@ a {
 }
 
 .chart {
-    width: 430px;
-    height: 250px;
-    justify-content: center;
-
+    width: 350px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.75);
+    
 }
+
+
+
+
 
 .gauge iframe,
 .chart iframe {
