@@ -19,11 +19,10 @@
                     frameborder="no"></iframe>
             </div>
             <div class="top-text">
-                <h1>Amatorska stacja pogody w Czechowicach-Dziedzicach</h1>
-                <p>Prosta stacja pogodowa oparta o Arduino</p>
+                <h1>Stacja pogody w Czechowicach-Dziedzicach, Os. Północ</h1>
+                
             </div>
-            <div class="social-icon">
-                <a href="#"><img src="/img/information.svg" alt="about"></a>
+            <div class="social-icon">                
                 <a href="https://github.com/kmlZ" target="_blank"><img src="/img/github-logo.svg" alt="github-logo"></a>
                 <a href="mailto:kamilsteelS@outlook.com"><img src="/img/mail.svg" alt="mail-logo"></a>
             </div>
@@ -75,35 +74,71 @@
             </div>
             <!-- END OF WINDSPEED -->
             <div class="data">
-                <h3>Natężenie światła</h3>
+                <h3>Pył PM1</h3>
                 <div class="gauge">
 
-                    <iframe scrolling="no" src="gauge/lux.html"></iframe>
+                    <iframe scrolling="no" src="gauge/PM1gauge.html"></iframe>
                 </div>
                 <div class="chart">
-                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\lux.html"></iframe>
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\PM1chart.html"></iframe>
                 </div>
             </div>
-            <!-- END OF LUX -->
+            <!-- END of PM1 -->
             <div class="data">
-                <h3>Temperatura odczuwalna</h3>
+                <h3>Pył PM2,5</h3>
                 <div class="gauge">
 
-                    <iframe scrolling="no" src="gauge/windchill.html"></iframe>
+                    <iframe scrolling="no" src="gauge/PM2gauge.html"></iframe>
                 </div>
                 <div class="chart">
-                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\windchill.html"></iframe>
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\PM2chart.html"></iframe>
                 </div>
             </div>
+            <!-- END of PM2.5 -->
+            <div class="data">
+                <h3>Pył PM10</h3>
+                <div class="gauge">
+
+                    <iframe scrolling="no" src="gauge/PM10gauge.html"></iframe>
+                </div>
+                <div class="chart">
+                    <iframe src="chart\temp\thingspeak.com\channels\214058\charts\1\PM10chart.html"></iframe>
+                </div>
+            </div>
+            <!-- END of PM10 -->
         </div>
+        
+        <div class="widgetnoflex">
+        <script src="http://burze.dzis.net/ramka.php?wersja=2&miejscowosc=Czechowice-Dziedzice&promien=50&pokaz_obecne_ostrzezenia=true&pokaz_grafike=true"></script>
+    </div>
+    
+<div class="widget">
+            <div id="widgetContainer" class="antistorm-widgetContainer" style="width:400px; height:400px; border:5px #eeeeee solid">
+                    <div class="antistorm-mainMapContainer"><div class="antistorm-divStack"></div></div>
+                    <div class="antistorm-link"><a href="http://antistorm.eu" target="_blank" title="Zagrożenie burzowe, radary, pogoda i opady deszczu">burze i radar na antistorm.eu</a></div>
+                    <a href="http://antistorm.eu" target="_blank"><div class="antistorm-legend"></div></a>
+                    </div>
+                    <script src="https://antistorm.eu/api/widgetV1/astorm-mapWidgetV1.js"></script>
+                    <script>
+                    var mapWidget = new AstormMapWidgetV1();
+                    mapWidget.widgetID = "widgetContainer";
+                    mapWidget.modality = "storm";
+                    mapWidget.excluded = ["estofex"];
+                    mapWidget.centerPoint = {lat: 49.91, lng: 19.00};
+                    mapWidget.zoom = 8;
+                    mapWidget.init();
+                    </script>
+            </div>
+    </div>
         <footer class="main-footer">          
-                <ul>
-                    <li><a href="#">O projekcie</a></li>
+                <ul>                  
                     <li><a href="https://github.com/kmlZ" target="_blank">GitHub</a></li>
                     <li><a href="mailto:kamilsteelS@outlook.com">Kontakt</a></li>
                 </ul>
         </footer>
     </div>
+
+    
 
 </body>
 
